@@ -201,3 +201,8 @@ bool MenuPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
 	
 	return true;
 }
+// Return the kind of panel this is
+PanelType MenuPanel::GetPanelType()
+{
+	return MenuPanelType;
+}

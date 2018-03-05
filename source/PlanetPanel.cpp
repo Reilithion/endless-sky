@@ -344,3 +344,8 @@ void PlanetPanel::TakeOff()
 		GetUI()->Pop(this);
 	}
 }
+// Return the kind of panel this is
+PanelType PlanetPanel::GetPanelType()
+{
+	return PlanetPanelType;
+}

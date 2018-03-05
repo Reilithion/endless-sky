@@ -409,3 +409,8 @@ void MapSalesPanel::ClickCategory(const string &name)
 	else
 		collapsed.insert(name);
 }
+// Return the kind of panel this is
+PanelType MapSalesPanel::GetPanelType()
+{
+	return MapSalesPanelType;
+}

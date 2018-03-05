@@ -27,6 +27,8 @@ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 // the panel closes, to report the outcome of the conversation.
 class LogbookPanel : public Panel {
 public:
+	// Return the kind of panel this is
+	virtual PanelType GetPanelType() override;
 	LogbookPanel(PlayerInfo &player);
 	
 	// Draw this panel.

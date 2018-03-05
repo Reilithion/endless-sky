@@ -341,3 +341,8 @@ void BankPanel::NewMortgage(const string &str)
 	
 	qualify = player.Accounts().Prequalify();
 }
+// Return the kind of panel this is
+PanelType BankPanel::GetPanelType()
+{
+	return BankPanelType;
+}

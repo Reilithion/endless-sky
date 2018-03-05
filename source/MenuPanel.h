@@ -27,6 +27,8 @@ class PlayerInfo;
 // credits and basic information on the currently loaded player.
 class MenuPanel : public Panel {
 public:
+	// Return the kind of panel this is
+	virtual PanelType GetPanelType() override;
 	MenuPanel(PlayerInfo &player, UI &gamePanels);
 	
 	virtual void Step() override;

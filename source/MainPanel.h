@@ -32,6 +32,8 @@ class ShipEvent;
 // needed to move the ships around and to figure out where they should be drawn.
 class MainPanel : public Panel {
 public:
+	// Return the kind of panel this is
+	virtual PanelType GetPanelType() override;
 	explicit MainPanel(PlayerInfo &player);
 	
 	virtual void Step() override;

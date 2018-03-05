@@ -32,6 +32,8 @@ class Ship;
 // a government that is particularly repressive of independent pilots.)
 class ShipyardPanel : public ShopPanel {
 public:
+	// Return the kind of panel this is
+	virtual PanelType GetPanelType() override;
 	explicit ShipyardPanel(PlayerInfo &player);
 	
 	

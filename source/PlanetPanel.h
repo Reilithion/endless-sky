@@ -33,6 +33,8 @@ class System;
 // (trading, jobs, bank, port, and crew) are displayed within this dialog.
 class PlanetPanel : public Panel {
 public:
+	// Return the kind of panel this is
+	virtual PanelType GetPanelType() override;
 	PlanetPanel(PlayerInfo &player, std::function<void()> callback);
 	
 	virtual void Step() override;

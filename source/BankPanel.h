@@ -26,6 +26,8 @@ class PlayerInfo;
 // allows them to apply for new mortgages or pay extra on existing debts.
 class BankPanel : public Panel {
 public:
+	// Return the kind of panel this is
+	virtual PanelType GetPanelType() override;
 	explicit BankPanel(PlayerInfo &player);
 	
 	virtual void Step() override;

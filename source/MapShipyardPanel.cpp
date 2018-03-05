@@ -215,3 +215,8 @@ void MapShipyardPanel::Init()
 		sort(it.second.begin(), it.second.end(),
 			[](const Ship *a, const Ship *b) {return a->ModelName() < b->ModelName();});
 }
+// Return the kind of panel this is
+PanelType MapShipyardPanel::GetPanelType()
+{
+	return MapShipyardPanelType;
+}

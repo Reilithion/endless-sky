@@ -26,6 +26,8 @@ class System;
 // will need to select them individually in the outfitter panel.
 class TradingPanel : public Panel {
 public:
+	// Return the kind of panel this is
+	virtual PanelType GetPanelType() override;
 	explicit TradingPanel(PlayerInfo &player);
 	~TradingPanel();
 	

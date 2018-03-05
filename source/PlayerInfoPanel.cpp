@@ -665,3 +665,8 @@ bool PlayerInfoPanel::Scroll(int distance)
 	scroll = newScroll;
 	return true;
 }
+// Return the kind of panel this is
+PanelType PlayerInfoPanel::GetPanelType()
+{
+	return PlayerInfoPanelType;
+}

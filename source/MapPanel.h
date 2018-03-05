@@ -37,6 +37,8 @@ class System;
 // drawing routes in between systems.
 class MapPanel : public Panel {
 public:
+	// Return the kind of panel this is
+	virtual PanelType GetPanelType() override;
 	// Enumeration for how the systems should be colored:
 	static const int SHOW_SHIPYARD = -1;
 	static const int SHOW_OUTFITTER = -2;
@@ -44,75 +46,75 @@ public:
 	static const int SHOW_SPECIAL = -4;
 	static const int SHOW_GOVERNMENT = -5;
 	static const int SHOW_REPUTATION = -6;
-	
+
 	static const double OUTER;
 	static const double INNER;
 	static const double LINK_WIDTH;
 	static const double LINK_OFFSET;
-	
-	
+
+
 public:
 	explicit MapPanel(PlayerInfo &player, int commodity = SHOW_REPUTATION, const System *special = nullptr);
-	
+
 	virtual void Draw() override;
-	
+
 	void DrawButtons(const std::string &condition);
 	static void DrawMiniMap(const PlayerInfo &player, double alpha, const System *const jump[2], int step);
-	
-	
+
+
 protected:
 	// Only override the ones you need; the default action is to return false.
 	virtual bool KeyDown(SDL_Keycode key, Uint16 mod, const Command &command) override;
 	virtual bool Click(int x, int y, int clicks) override;
 	virtual bool Drag(double dx, double dy) override;
 	virtual bool Scroll(double dx, double dy) override;
-	
+
 	// Get the color mapping for various system attributes.
 	static Color MapColor(double value);
 	static Color ReputationColor(double reputation, bool canLand, bool hasDominated);
 	static Color GovernmentColor(const Government *government);
 	static Color UninhabitedColor();
 	static Color UnexploredColor();
-	
+
 	virtual double SystemValue(const System *system) const;
-	
+
 	void Select(const System *system);
 	void Find(const std::string &name);
-	
+
 	double Zoom() const;
-	
+
 	// Check whether the NPC and waypoint conditions of the given mission have
 	// been satisfied.
 	bool IsSatisfied(const Mission &mission) const;
 	static bool IsSatisfied(const PlayerInfo &player, const Mission &mission);
-	
+
 	// Function for the "find" dialogs:
 	static int Search(const std::string &str, const std::string &sub);
-	
-	
+
+
 protected:
 	PlayerInfo &player;
-	
+
 	DistanceMap distance;
-	
+
 	const System *playerSystem;
 	const System *selectedSystem;
 	const Planet *selectedPlanet = nullptr;
 	// A system associated with a dialog or conversation.
 	const System *specialSystem;
-	
+
 	Point center;
 	int commodity;
 	int step = 0;
 	std::string buttonCondition;
-	
+
 	// Distance from the screen center to the nearest owned system,
 	// for use in determining which governments are in the legend.
 	std::map<const Government *, double> closeGovernments;
 	// Systems in which your escorts are located.
 	std::map<const System *, bool> escortSystems;
-	
-	
+
+
 private:
 	void DrawTravelPlan();
 	// Indicate which other systems have player escorts.

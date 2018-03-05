@@ -319,3 +319,8 @@ void HailPanel::SetBribe(double scale)
 	if(scale && !bribe)
 		bribe = 1000;
 }
+// Return the kind of panel this is
+PanelType HailPanel::GetPanelType()
+{
+	return HailPanelType;
+}

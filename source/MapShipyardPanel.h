@@ -30,6 +30,8 @@ class Sprite;
 // to see which systems it is available in.
 class MapShipyardPanel : public MapSalesPanel {
 public:
+	// Return the kind of panel this is
+	virtual PanelType GetPanelType() override;
 	explicit MapShipyardPanel(PlayerInfo &player);
 	explicit MapShipyardPanel(const MapPanel &panel, bool onlyHere = false);
 	

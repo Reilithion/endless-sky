@@ -778,3 +778,8 @@ bool MissionPanel::SelectAnyMission()
 	}
 	return false;
 }
+// Return the kind of panel this is
+PanelType MissionPanel::GetPanelType()
+{
+	return MissionPanelType;
+}

@@ -26,6 +26,8 @@ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 // UI panel for editing preferences, especially the key mappings.
 class PreferencesPanel : public Panel {
 public:
+	// Return the kind of panel this is
+	virtual PanelType GetPanelType() override;
 	PreferencesPanel();
 	
 	// Draw this panel.

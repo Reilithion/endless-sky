@@ -31,6 +31,8 @@ class Sprite;
 // Base class for the maps of shipyards and outfitters.
 class MapSalesPanel : public MapPanel {
 public:
+	// Return the kind of panel this is
+	virtual PanelType GetPanelType() override;
 	MapSalesPanel(PlayerInfo &player, bool isOutfitters);
 	MapSalesPanel(const MapPanel &panel, bool isOutfitters);
 	

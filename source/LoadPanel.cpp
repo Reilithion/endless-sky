@@ -542,3 +542,8 @@ void LoadPanel::DeleteSave()
 		sideHasFocus = false;
 	}
 }
+// Return the kind of panel this is
+PanelType LoadPanel::GetPanelType()
+{
+	return LoadPanelType;
+}

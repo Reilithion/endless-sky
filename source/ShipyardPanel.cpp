@@ -338,3 +338,8 @@ void ShipyardPanel::SellShip()
 		playerShips.insert(playerShip);
 	player.UpdateCargoCapacities();
 }
+// Return the kind of panel this is
+PanelType ShipyardPanel::GetPanelType()
+{
+	return ShipyardPanelType;
+}

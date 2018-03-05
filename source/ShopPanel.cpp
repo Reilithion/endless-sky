@@ -1161,3 +1161,8 @@ char ShopPanel::CheckButton(int x, int y)
 	
 	return ' ';
 }
+// Return the kind of panel this is
+PanelType ShopPanel::GetPanelType()
+{
+	return ShopPanelType;
+}

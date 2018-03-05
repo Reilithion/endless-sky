@@ -30,6 +30,8 @@ class Rectangle;
 // their fleet (including changing which one is the flagship).
 class PlayerInfoPanel : public Panel {
 public:
+	// Return the kind of panel this is
+	virtual PanelType GetPanelType() override;
 	explicit PlayerInfoPanel(PlayerInfo &player);
 	
 	virtual void Step() override;

@@ -30,6 +30,8 @@ class Mission;
 // have previously accepted.
 class MissionPanel : public MapPanel {
 public:
+	// Return the kind of panel this is
+	virtual PanelType GetPanelType() override;
 	explicit MissionPanel(PlayerInfo &player);
 	explicit MissionPanel(const MapPanel &panel);
 	

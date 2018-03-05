@@ -35,6 +35,8 @@ class Rectangle;
 // hardpoints. In flight, this panel allows them to jettison cargo.
 class ShipInfoPanel : public Panel {
 public:
+	// Return the kind of panel this is
+	virtual PanelType GetPanelType() override;
 	explicit ShipInfoPanel(PlayerInfo &player, int index = -1);
 	
 	virtual void Draw() override;

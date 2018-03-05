@@ -986,3 +986,8 @@ void MapPanel::DrawPointer(Point position, Angle &angle, const Color &color, boo
 		PointerShader::Draw(position, angle.Unit(), 14. + bigger, 19. + 2 * bigger, -4., black);
 	PointerShader::Draw(position, angle.Unit(), 8. + bigger, 15. + 2 * bigger, -6., color);
 }
+// Return the kind of panel this is
+PanelType MapPanel::GetPanelType()
+{
+	return MapPanelType;
+}

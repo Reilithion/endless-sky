@@ -583,3 +583,8 @@ void PreferencesPanel::Exit()
 	
 	GetUI()->Pop(this);
 }
+// Return the kind of panel this is
+PanelType PreferencesPanel::GetPanelType()
+{
+	return PreferencesPanelType;
+}

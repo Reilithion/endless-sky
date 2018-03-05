@@ -117,3 +117,8 @@ bool HiringPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
 	
 	return false;
 }
+// Return the kind of panel this is
+PanelType HiringPanel::GetPanelType()
+{
+	return HiringPanelType;
+}

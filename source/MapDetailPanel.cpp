@@ -660,3 +660,8 @@ void MapDetailPanel::SetCommodity(int index)
 	commodity = index;
 	player.SetMapColoring(commodity);
 }
+// Return the kind of panel this is
+PanelType MapDetailPanel::GetPanelType()
+{
+	return MapDetailPanelType;
+}

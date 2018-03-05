@@ -247,3 +247,8 @@ void MapOutfitterPanel::Init()
 		sort(it.second.begin(), it.second.end(),
 			[](const Outfit *a, const Outfit *b) {return a->Name() < b->Name();});
 }
+// Return the kind of panel this is
+PanelType MapOutfitterPanel::GetPanelType()
+{
+	return MapOutfitterPanelType;
+}

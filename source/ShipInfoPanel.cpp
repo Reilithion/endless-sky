@@ -750,3 +750,8 @@ void ShipInfoPanel::Disown()
 	player.DisownShip(ship);
 	UpdateInfo();
 }
+// Return the kind of panel this is
+PanelType ShipInfoPanel::GetPanelType()
+{
+	return ShipInfoPanelType;
+}

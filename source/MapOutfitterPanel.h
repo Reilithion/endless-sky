@@ -30,6 +30,8 @@ class Sprite;
 // to see which systems it is available in.
 class MapOutfitterPanel : public MapSalesPanel {
 public:
+	// Return the kind of panel this is
+	virtual PanelType GetPanelType() override;
 	explicit MapOutfitterPanel(PlayerInfo &player);
 	explicit MapOutfitterPanel(const MapPanel &panel, bool onlyHere = false);
 	

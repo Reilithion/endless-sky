@@ -322,3 +322,8 @@ void TradingPanel::Buy(int64_t amount)
 	player.Accounts().AddCredits(-amount * price);
 	GameData::AddPurchase(system, type, amount);
 }
+// Return the kind of panel this is
+PanelType TradingPanel::GetPanelType()
+{
+	return TradingPanelType;
+}

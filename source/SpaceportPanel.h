@@ -27,6 +27,8 @@ class PlayerInfo;
 // missions that are marked as originating in the spaceport.
 class SpaceportPanel : public Panel {
 public:
+	// Return the kind of panel this is
+	virtual PanelType GetPanelType() override;
 	explicit SpaceportPanel(PlayerInfo &player);
 	
 	void UpdateNews();

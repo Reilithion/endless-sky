@@ -871,3 +871,8 @@ const vector<Ship *> OutfitterPanel::GetShipsToOutfit(bool isBuy) const
 	
 	return shipsToOutfit;
 }
+// Return the kind of panel this is
+PanelType OutfitterPanel::GetPanelType()
+{
+	return OutfitterPanelType;
+}

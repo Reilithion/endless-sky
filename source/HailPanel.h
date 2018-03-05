@@ -35,6 +35,8 @@ class StellarObject;
 // to bribe a planet to allow you to land there.
 class HailPanel : public Panel {
 public:
+	// Return the kind of panel this is
+	virtual PanelType GetPanelType() override;
 	HailPanel(PlayerInfo &player, const std::shared_ptr<Ship> &ship);
 	HailPanel(PlayerInfo &player, const StellarObject *object);
 	

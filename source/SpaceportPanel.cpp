@@ -95,3 +95,8 @@ void SpaceportPanel::Draw()
 		newsMessage.Draw(interface->GetBox("message").TopLeft(), *GameData::Colors().Get("medium"));
 	}
 }
+// Return the kind of panel this is
+PanelType SpaceportPanel::GetPanelType()
+{
+	return SpaceportPanelType;
+}

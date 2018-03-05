@@ -310,3 +310,8 @@ void LogbookPanel::Update(bool selectLast)
 	begin = player.Logbook().lower_bound(Date(0, selectedDate.Month(), selectedDate.Year()));
 	end = player.Logbook().lower_bound(Date(32, selectedDate.Month(), selectedDate.Year()));
 }
+// Return the kind of panel this is
+PanelType LogbookPanel::GetPanelType()
+{
+	return LogbookPanelType;
+}

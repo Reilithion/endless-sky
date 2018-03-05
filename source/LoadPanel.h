@@ -33,6 +33,8 @@ class PlayerInfo;
 // to a previous game state they must save a "snapshot" of that state.
 class LoadPanel : public Panel {
 public:
+	// Return the kind of panel this is
+	virtual PanelType GetPanelType() override;
 	LoadPanel(PlayerInfo &player, UI &gamePanels);
 	
 	virtual void Draw() override;

@@ -37,6 +37,8 @@ class Ship;
 // configured in such a way that it cannot fly (e.g. no engines or steering).
 class OutfitterPanel : public ShopPanel {
 public:
+	// Return the kind of panel this is
+	virtual PanelType GetPanelType() override;
 	explicit OutfitterPanel(PlayerInfo &player);
 	
 	virtual void Step() override;

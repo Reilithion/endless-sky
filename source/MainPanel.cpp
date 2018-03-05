@@ -506,3 +506,8 @@ void MainPanel::StepEvents(bool &isActive)
 		handledFront = false;
 	}
 }
+// Return the kind of panel this is
+PanelType MainPanel::GetPanelType()
+{
+	return MainPanelType;
+}
